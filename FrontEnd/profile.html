@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Профиль</title>
+  <link rel="stylesheet" href="./style/profile.css" />
+</head>
+
+<body class="theme-dark">
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="./index.html" aria-label="На главную">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span class="brand__text">MyApp</span>
+      </a>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">
+          Сменить тему
+        </button>
+
+        <button class="btn btn--danger" id="logoutBtn" type="button">
+          Выйти
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card__head">
+        <h1 class="card__title">Профиль</h1>
+        <p class="card__subtitle">Данные аккаунта</p>
+      </div>
+
+      <!-- Можно выводить статусы/ошибки -->
+      <div class="notice" id="profileNotice" hidden></div>
+
+      <div class="grid">
+        <article class="field">
+          <div class="field__label">Email</div>
+          <div class="field__value" id="profileEmail" data-field="email">—</div>
+        </article>
+
+        <article class="field">
+          <div class="field__label">Логин</div>
+          <div class="field__value" id="profileLogin" data-field="login">—</div>
+        </article>
+      </div>
+
+      <div class="divider"></div>
+
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="text-muted">© <span id="year"></span> MyApp</span>
+      <a class="link" href="./index.html">На главную</a>
+    </div>
+  </footer>
+  <script src="js/profile.js" type="module"></script>
+</body>
+</html>
