@@ -1,0 +1,33 @@
+{
+  "name": "validform",
+  "version": "1.0.0",
+  "description": "Vanilla JS registration and profile demo app with validation, theming, and local auth",
+  "scripts": {
+    "dev": "json-server backend/db.json5",
+    "start": "json-server backend/db.json5",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarovandrej01-arch/validForm.git"
+  },
+  "keywords": [
+    "javascript",
+    "vanilla-js",
+    "form-validation",
+    "localstorage",
+    "theme-switcher",
+    "json-server",
+    "frontend"
+  ],
+  "author": "sarovandrej01-arch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarovandrej01-arch/validForm/issues"
+  },
+  "homepage": "https://github.com/sarovandrej01-arch/validForm#readme",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "prettier": "^3.7.4"
+  }
+}
