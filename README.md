@@ -2,7 +2,7 @@ validForm
 
 A modern registration and profile management demo app built with vanilla JavaScript.
 
-This project demonstrates form validation, theme switching, local authentication logic, profile rendering, and clean modular architecture without any frameworks.
+This project demonstrates form validation, theme switching, local authentication logic, profile rendering, and clean modular architecture — without using any frameworks.
 
 🚀 Features
 
@@ -41,7 +41,6 @@ json-server (mock backend)
 LocalStorage API
 
 📁 Project Structure
-
 /frontend
 /js
 FormSender.js
@@ -67,32 +66,28 @@ package.json
 ⚙️ How to Run
 
 1. Clone the repository
-
-git clone https://github.com/your-username/validForm.git
+   git clone git@github.com:sarovandrej01-arch/validForm.git
 
 2. Install backend dependencies
-
-cd backend
-npm install
+   cd backend
+   npm install
 
 3. Run mock API
-
-npx json-server db.json5
+   npx json-server db.json5
 
 4. Open frontend
 
 Use Live Server or any local server.
 
 🧠 Architecture Overview
-
-FormValidator — Handles all form validation logic
-ThemeManager — Controls light/dark theme switching
-UserManager — Manages auth state and welcome UI
-ProfileManager — Renders user profile data
-FormSender — Sends form data to API
-PasswordToggle — Password visibility logic
-
-🎯 Purpose of this project
+Module Responsibility
+FormValidator Handles all form validation logic
+ThemeManager Controls light/dark theme switching
+UserManager Manages auth state and welcome UI
+ProfileManager Renders user profile data
+FormSender Sends form data to API
+PasswordToggle Password visibility logic
+🎯 Purpose of This Project
 
 This project was created to demonstrate:
 
@@ -121,3 +116,7 @@ Edit profile
 Avatar upload
 
 Accessibility improvements
+
+📄 License
+
+MIT
