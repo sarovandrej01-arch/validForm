@@ -1,108 +1,106 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Регистрация</title>
-  <link rel="stylesheet" href="./style/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
 
-<body class="theme-dark">
+  <body class="theme-dark">
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html">
+          <span class="brand__logo"></span>
+          <span class="brand__text">MyApp</span>
+        </a>
 
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="./index.html">
-        <span class="brand__logo"></span>
-        <span class="brand__text">MyApp</span>
-      </a>
-
-      <div class="topbar__actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button">
-          Сменить тему
-        </button>
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="themeToggle" type="button">
+            Сменить тему
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container" id="container-register-form">
-    <section class="card" id="card-register-form">
-      <div class="card__head">
-        <h1 class="card__title">Регистрация</h1>
-        <p class="card__subtitle">Создайте аккаунт</p>
-      </div>
-
-      <form id="registerForm" novalidate>
-
-        <div class="form__group">
-          <label for="userName__registerForm">Логин</label>
-          <input
-            type="text"
-            id="userName__registerForm"
-            name="username"
-            class="form__input"
-            required
-            minlength="3"
-            maxlength="20"
-            pattern="^[a-zA-Z0-9_]+$"
-            aria-describedby="username-error"
-            aria-invalid="false"
-          />
-          <span class="form__error" id="username-error"></span>
+    <main class="container" id="container-register-form">
+      <section class="card" id="card-register-form">
+        <div class="card__head">
+          <h1 class="card__title">Регистрация</h1>
+          <p class="card__subtitle">Создайте аккаунт</p>
         </div>
 
-        <div class="form__group">
-          <label for="email__registerForm">Email</label>
-          <input
-            type="email"
-            id="email__registerForm"
-            name="email"
-            class="form__input"
-            required
-            minlength="5"
-            maxlength="50"
-            aria-describedby="email-error"
-            aria-invalid="false"
-          />
-          <span class="form__error" id="email-error"></span>
-        </div>
-
-        <div class="form__group">
-          <label for="password__registerForm">Пароль</label>
-
-          <input
-            class="form__input"
-            type="password"
-            id="password__registerForm"
-            minlength="6"
-            maxlength="30"
-            name="password"
-            aria-describedby="password-error"
-            aria-invalid="false"
-            required
-          />
-
-          <div id="password__toggle">
-            <label for="checkbox__registerForm">Показать пароль</label>
-            <input type="checkbox" id="checkbox__registerForm" />
+        <form id="registerForm" novalidate>
+          <div class="form__group">
+            <label for="userName__registerForm">Логин</label>
+            <input
+              type="text"
+              id="userName__registerForm"
+              name="username"
+              class="form__input"
+              required
+              minlength="3"
+              maxlength="20"
+              pattern="^[a-zA-Z0-9_]+$"
+              aria-describedby="username-error"
+              aria-invalid="false"
+            />
+            <span class="form__error" id="username-error"></span>
           </div>
 
-          <span class="form__error" id="password-error"></span>
-        </div>
+          <div class="form__group">
+            <label for="email__registerForm">Email</label>
+            <input
+              type="email"
+              id="email__registerForm"
+              name="email"
+              class="form__input"
+              required
+              minlength="5"
+              maxlength="50"
+              aria-describedby="email-error"
+              aria-invalid="false"
+            />
+            <span class="form__error" id="email-error"></span>
+          </div>
 
-        <button type="submit" class="btn" id="submit__registerForm">
-          Зарегистрироваться
-        </button>
-      </form>
-    </section>
-  </main>
+          <div class="form__group">
+            <label for="password__registerForm">Пароль</label>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span class="text-muted">© <span id="year"></span> MyApp</span>
-      <a class="link" href="./index.html">На главную</a>
-    </div>
-  </footer>
+            <input
+              class="form__input"
+              type="password"
+              id="password__registerForm"
+              minlength="6"
+              maxlength="30"
+              name="password"
+              aria-describedby="password-error"
+              aria-invalid="false"
+              required
+            />
 
-  <script src="./js/main.js" type="module"></script>
-</body>
+            <div id="password__toggle">
+              <label for="checkbox__registerForm">Показать пароль</label>
+              <input type="checkbox" id="checkbox__registerForm" />
+            </div>
+
+            <span class="form__error" id="password-error"></span>
+          </div>
+
+          <button type="submit" class="btn" id="submit__registerForm">
+            Зарегистрироваться
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="text-muted">© <span id="year"></span> MyApp</span>
+        <a class="link" href="./index.html">На главную</a>
+      </div>
+    </footer>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
 </html>

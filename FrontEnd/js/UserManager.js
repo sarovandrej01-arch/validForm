@@ -1,53 +1,53 @@
 export default class UserManager {
-    constructor(form, body) {
-        this.form = form
-        this.body = body
-        this.blockEl = null
-    }
-
-    getUser() {
-        const userLoc = localStorage.getItem('user')
-        if (userLoc) {
-            return JSON.parse(userLoc)
-        }
-        return null
-    }
-
-    setUser(user) {
-        localStorage.setItem('user', JSON.stringify(user))
-    }
-
-renderUser(user) {
-  this.form.style.display = "none"
-
-  if (!this.blockEl) {
-    this.blockEl = document.createElement('div')
-    this.blockEl.classList.add('welcome-card')
-
-    this.textEl = document.createElement('span')
-    this.blockEl.append(this.textEl)
-
-    this.body.append(this.blockEl)
+  constructor(form, body) {
+    this.form = form;
+    this.body = body;
+    this.blockEl = null;
   }
 
-  this.textEl.textContent = `Привет, ${user.username}!`
-}
+  getUser() {
+    const userLoc = localStorage.getItem("user");
+    if (userLoc) {
+      return JSON.parse(userLoc);
+    }
+    return null;
+  }
 
-    renderGuest() {
-        this.form.style.display = ""
+  setUser(user) {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 
-        if (this.blockEl) {
-            this.blockEl.style.display = "none"
-        }
+  renderUser(user) {
+    this.form.style.display = "none";
+
+    if (!this.blockEl) {
+      this.blockEl = document.createElement("div");
+      this.blockEl.classList.add("welcome-card");
+
+      this.textEl = document.createElement("span");
+      this.blockEl.append(this.textEl);
+
+      this.body.append(this.blockEl);
     }
 
-    checkAuth() {
-        const user = this.getUser()
+    this.textEl.textContent = `Привет, ${user.username}!`;
+  }
 
-        if (user) {
-            this.renderUser(user)
-        } else {
-            this.renderGuest()
-        }
+  renderGuest() {
+    this.form.style.display = "";
+
+    if (this.blockEl) {
+      this.blockEl.style.display = "none";
     }
+  }
+
+  checkAuth() {
+    const user = this.getUser();
+
+    if (user) {
+      this.renderUser(user);
+    } else {
+      this.renderGuest();
+    }
+  }
 }
